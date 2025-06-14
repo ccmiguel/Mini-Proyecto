@@ -1,12 +1,14 @@
 # Mini SNS Mini SNS is a simple social networking service (SNS) application. Users can enjoy social activities such as creating posts, adding friends, commenting, and liking posts. ## Features
 - **User Registration and Login** : Users can create an account and log in.
+  
 - **Create Posts**: Users can write and publish their own posts.
 
-- **V iew Posts**: Users can view the latest posts, including those from their friends.
-- 
+- **View Posts**: Users can view the latest posts, including those from their friends.
+  
 - **Commenting** : Users can add comments to posts or delete their own comments.
   
 - **Likes** : Users can like or unlike posts.
+  
 - **Friend Management** : Users can search for and add friends, as well as view their friend list.
 
 ## How to Run
@@ -26,19 +28,19 @@
  - Open [http://localhost:3000](http://localhost:3000) in your browser to use the application.
 
 ## Tech Stack 
-- **Frontend**
+1. **Frontend**
  - HTML, CSS, JavaScript
  - EJS (Template Engine)
    
-- **Backend**
+2. **Backend**
  - Node.js
  - Express.js
    
-- **Database**
+3. **Database**
  - MongoDB
  - Mongoose (MongoDB ODM)
    
-- **Others**
+4. **Others**
  - bcrypt (Password Encryption)
  - express-session (Session Management)
  - morgan (HTTP Request Logging)
