@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini SNS - Home</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <h1>Mini <br /> SNS</h1>
+    <h1 id="message">Bienvenido!!</h1>
+
+    <p class="normal">This is a normal post.</p>
+    <p class="highlighted">This post is highlighted.</p>
+    <p class="important">This post is very important.</p>
+
+    <button onclick="showConsoleOutput()">Click me</button>
+
+    <!-- Contenedor para los mensajes -->
+    <div id="mensaje-bienvenida" style="margin-top: 20px; text-align: center;"></div>
+
+    <input
+      type="text"
+      id="typing"
+      placeholder="Escribe aquí"
+      style="background-color: purple; color: white; padding: 8px;"
+    />
+
+    <br><br>
+    <button id="btn" style="background-color: lightblue;">Click Me!</button>
+    <button id="btn2" style="background-color: lightpink;">Click Me2</button>
+
+
+    <br><br>
+
+<!-- Botón principal que detecta mouseover y click -->
+<div style="text-align: center;">
+  <button id="event-button" style="background-color: black; color: white; padding: 10px 20px;">
+    Click or Hover me!
+  </button>
+</div>
+
+<!-- Muestra el tipo de evento -->
+<div style="text-align: center; margin: 10px;">
+  <input type="text" id="event-type" readonly style="padding: 10px; width: 70%;" />
+</div>
+
+<!-- Botones de agregar/eliminar ítems -->
+<div style="text-align: center; margin-bottom: 10px;">
+  <button id="add-item">Add Item</button>
+  <button id="remove-item" style="background-color: black; color: white;">Remove Last Item</button>
+</div>
+
+<!-- Contenedor de los ítems -->
+<div id="items-container" style="border: 1px dashed black; padding: 20px; margin: 0 auto; width: 80%; max-width: 600px;">
+</div>
+
+<!-- Navegación a otras plantillas -->
+    <div style="text-align: center; margin-top: 40px;">
+      <h2>Go to:</h2>
+    <ul>
+      <li><a href="/write">✍️ Write a Post</a></li>
+      <li><a href="/posts">📋 View Posts</a></li>
+    </ul>
+    </div>
+
+ </body>
+</html>
+

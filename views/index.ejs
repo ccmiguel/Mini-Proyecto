@@ -1,0 +1,33 @@
+<!-- Al inicio del archivo -->
+<%- include('partials/header', { username: username }) %>
+
+<h2>Mini SNS Project</h2>
+<p>Bienvenido a mi primera página social - created by Miguel!</p>
+
+<% if (username) { %>
+  <p>👋 ¡Hola, <%= username %>! 😄</p>
+  <p>🌐 Esta pequeña red social fue construida con <strong>Node.js</strong> y <strong>Express.js</strong>.</p>
+  <p>💡 Funcionalidades principales:</p>
+  <ul style="text-align: left;">
+    <li>📝 Puedes crear nuevas publicaciones desde la pestaña <strong>Write</strong>.</li>
+    <li>📄 Visualiza todas tus publicaciones en la pestaña <strong>Posts</strong>.</li>
+    <li>🚪 Cierra sesión cuando gustes desde <strong>Logout</strong>.</li>
+  </ul>
+  <p>🔝 Utiliza el menú de navegación superior para moverte fácilmente entre las diferentes secciones del sitio.</p>
+  <p>🎯 ¡Explora, publica y diviértete!</p>
+<% } else { %>
+  <form action="/login" method="POST">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" name="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+    <a href="/register">← Register</a>
+  </form>
+<% } %>
+
+<%- include('partials/footer') %>

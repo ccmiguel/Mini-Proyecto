@@ -1,0 +1,25 @@
+<%- include('partials/header', { username: username }) %>
+
+<h1>📄 Posts</h1>
+<script src="/js/posts.js"></script>
+
+
+<% if (posts.length === 0) { %>
+  <p>No hay publicaciones todavía.</p>
+<% } else { %>
+  <% posts.forEach(post => { %>
+    <div class="post">
+
+      <%- include('feed', { post: post }) %>
+      <div class="comments"></div>
+      <input type="text" class="comment-input" placeholder="Add a comment" />
+      <button class="add-comment">Add Comment</button>
+    </div>
+    <hr />
+  <% }) %>
+<% } %>
+
+<br/>
+<a href="/">← Back to Home</a>
+
+<%- include('partials/footer') %>
