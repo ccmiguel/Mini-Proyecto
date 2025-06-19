@@ -1,5 +1,5 @@
 
-<div class="post">
+<div class="post" data-uuid="<%= post.uuid %>">
   <strong><%= post.author %></strong><br />
   <span><%= post.content %></span>
 
@@ -19,6 +19,14 @@
   <input type="text" class="comment-input" placeholder="Write a comment..." />
   <button class="add-comment">Add Comment</button>
 
-  <div class="comments"></div>
+  <div class="comments">
+    <% if (post.comments && post.comments.length > 0) { %>
+      <% post.comments.forEach(comment => { %>
+        <p><strong><%= comment.user %>:</strong> <%= comment.text %></p>
+      <% }) %>
+    <% } else { %>
+      <p>No comments yet.</p>
+    <% } %>
+  </div>
 </div>
 <hr />

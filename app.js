@@ -175,6 +175,27 @@ app.post("/posts/:uuid/like", async (req, res) => {
   }
 });
 
+app.post("/posts/:uuid/comment", async (req, res) => {
+  const { comment } = req.body;
+  const username = req.session.username;
+
+  if (!username) return res.status(401).send("Unauthorized");
+
+  try {
+    const post = await Feed.findOne({ uuid: req.params.uuid });
+
+    if (!post) return res.status(404).send("Post not found");
+
+    post.comments.push({ user: username, text: comment });
+    await post.save();
+
+    res.status(200).json({ message: "Comment added" });
+  } catch (err) {
+    console.error("Error adding comment:", err);
+    res.status(500).send("Server error");
+  }
+});
+
 
 // app.get("/posts", async (req, res) => {
 //   if (!req.session.username) {
